@@ -1,0 +1,44 @@
+server:
+    port: 8763
+
+spring:
+  application:
+    name: renx-config
+  cloud:
+    config:
+      server:
+      git:
+        uri: https://github.com/ityouknow/spring-cloud-starter/
+        search-paths: config-repo
+        username:
+        password:
+        default-label: master
+      bus:
+      trace:
+        enabled: true
+      enabled: true
+  rabbitmq:
+    host: yhtg.huayunstar.com
+    #host: localhost
+    port: 5672
+    virtual-host: /
+    username: admin
+    password: dqw123
+
+
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+
+
